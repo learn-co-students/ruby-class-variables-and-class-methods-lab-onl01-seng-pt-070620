@@ -27,4 +27,8 @@ class Song
         genreshash = Hash.new
         genreshash = @@genres.group_by{|genre| genre}.collect {|k,v,| [k, v.size] }.to_h
     end
+    def self.artist_count
+        artistshash = Hash.new
+        artistshash = @@artists.group_by{|artist| artist}.collect {|k,v,| [k, v.size] }.to_h
+    end
 end
