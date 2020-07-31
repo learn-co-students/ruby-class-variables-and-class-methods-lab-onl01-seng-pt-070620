@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song 
   attr_accessor :name, :artist, :genre
   
@@ -44,9 +46,10 @@ class Song
     @@artist_count = {}
     @@artists.each do |artist |  # < count?
       @@artist_count[artist] ||= 0 
-      @@artist_count[artist]
+      @@artist_count[artist] += 1 
     end 
+    @@artist_count
   end 
-  @@artist_count
+  
 end 
 
